@@ -1,0 +1,31 @@
+{
+    "name": "uc/qrcode-bundle",
+    "description": "Symfony 3 bundle integrate QRcode into a Symfony project",
+    "type": "symfony-bundle",
+    "require": {
+        "php": ">=7.1",
+        "symfony/symfony": "~3.0",
+        "endroid/qrcode": "^2.2",
+        "knplabs/knp-snappy-bundle": "~1.4",
+        "sfk/email-template-bundle": "dev-master",
+    },
+    "homepage": "https://github.com/Zeppelinen-DevOps/symfony2-qrcode-bundle",
+    "license": "GNU v3",
+    "authors": [
+        {
+            "name": "Praesyx",
+            "email": "pavel10@mail.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Uc\\QCodeBundle\\": ""
+        }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
+    }
+}

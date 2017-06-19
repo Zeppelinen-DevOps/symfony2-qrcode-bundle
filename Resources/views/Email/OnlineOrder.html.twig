@@ -1,0 +1,13 @@
+{% extends 'SfkEmailTemplateBundle::email.html.twig' %}
+
+{% block from -%}
+    {{ from_email }}
+{%- endblock %}
+
+{% block subject -%}
+    {{ subject }}
+{%- endblock %}
+
+{% block body -%}
+    {{ body }}
+{%- endblock %}

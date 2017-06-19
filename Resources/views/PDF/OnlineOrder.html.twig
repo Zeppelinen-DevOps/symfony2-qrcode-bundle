@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Online Order - {{ orderId }}</title>
+</head>
+
+<body>
+<style>
+    html
+    {
+        line-height                 : 1.15;
+        -ms-text-size-adjust        : 100%;
+        -webkit-text-size-adjust    : 100%;
+        -webkit-box-sizing          : border-box;
+        box-sizing                  : border-box;
+        -ms-overflow-style          : scrollbar;
+        -webkit-tap-highlight-color : transparent
+    }
+</style>
+<div class="header">
+    <h1>{{ header }}</h1>
+</div>
+<div class="main">
+    <h3>{{ siteName }}</h3>
+    <p>{{ body }}</p>
+    <p><img src="{{ app.request.scheme ~'://' ~ app.request.httpHost ~ qrCode }}" class="qcode"></p>
+</div>
+<div class="footer">
+    <p>
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+        aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+    </p>
+</div>
+</body>
+</html>

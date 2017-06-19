@@ -1,0 +1,12 @@
+services:
+    uc_qcode.q.manager:
+        class: Uc\QCodeBundle\Model\QCodeManager
+        arguments: ['@kernel']
+
+    uc_qcode.pdf.manager:
+        class: Uc\QCodeBundle\Model\PDFManager
+        arguments: ['@service_container', '%kernel.root_dir%']
+
+    uc_qcode.delivery.manager:
+        class: Uc\QCodeBundle\Model\DeliveryManager
+        arguments: ['@kernel']
