@@ -7,7 +7,7 @@
         "symfony/symfony": "~3.0",
         "endroid/qrcode": "^2.2",
         "knplabs/knp-snappy-bundle": "~1.4",
-        "sfk/email-template-bundle": "dev-master",
+        "sfk/email-template-bundle": "dev-master"
     },
     "homepage": "https://github.com/Zeppelinen-DevOps/symfony2-qrcode-bundle",
     "license": "GNU v3",
