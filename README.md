@@ -59,7 +59,7 @@ knp_snappy:
 ```
 
 ``` bash
-composer require uc/qrcode-bundle
+composer require uc/qrcode-bundle dev-master
 ```
 
 Load required bundles in AppKernel.php:
