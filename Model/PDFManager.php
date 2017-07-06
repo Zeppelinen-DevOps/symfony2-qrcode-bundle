@@ -54,26 +54,15 @@ class PDFManager implements ContainerAwareInterface
 
     /**
      * $vars = [
-     *     'qrCode'    => '' //QRCode img
-     *     'siteName'  => '' //Site name
-     *     'header'    => '' //PDF header
-     *     'body'      => '' //PDF body
-     *     'orderId'   => '' //Order ID
+     *     'html'    => '' //Html content which will be processed to pdf
+     *     'name'  => '' //PDF name
      * ]
      * @param array $vars
      * @return array
      */
     public function progressPDF($vars = [])
     {
-        $html = $this->render('UcQCodeBundle:PDF:OnlineOrder.html.twig', [
-            'qrCode' => $vars['qrCode'],
-            'siteName' => $vars['siteName'],
-            'header' => $vars['header'],
-            'body' => $vars['body'],
-            'orderId' => $vars['orderId'],
-        ])->getContent();
-
-        $pdf = $this->container->get('knp_snappy.pdf')->getOutputFromHtml($html);
+        $pdf = $this->container->get('knp_snappy.pdf')->getOutputFromHtml($vars['html']);
 
         $fs = new Filesystem();
 
@@ -85,9 +74,7 @@ class PDFManager implements ContainerAwareInterface
         }
         $tmpSource = realpath($tmpSource);
 
-        $filename = $vars['orderId'] . date('dmY');
-
-        $source = $tmpSource . '/' . $filename . '.pdf';
+        $source = $tmpSource . '/' .  $vars['name'] . '.pdf';
 
         file_put_contents($source, $pdf);
         return [
