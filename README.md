@@ -59,6 +59,10 @@ knp_snappy:
 ```
 
 ``` bash
+composer require sfk/email-template-bundle dev-master
+```
+
+``` bash
 composer require uc/qrcode-bundle dev-master
 ```
 
@@ -93,11 +97,8 @@ $QManager->generateQCode($vars = []);
 ``` php
 /**
  * $vars = [
- *     'qrCode'    => '' //QRCode
- *     'siteName'  => '' //Site name
- *     'header'    => '' //PDF header
- *     'body'      => '' //PDF body
- *     'orderId'   => '' //Order ID
+ *     'html'    => '' //Html content which will be processed to pdf
+ *     'name'  => '' //PDF name
  * ]
  * @return array = [
  *     'path' => '' //File location
